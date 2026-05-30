@@ -59,6 +59,8 @@ All experiments use local models via Ollama — no API key required.
 | Prompt Sensitivity | 90% consistency across 4 question variants |
 | Response Scoring | Average score 0.60 — short answers penalized |
 | Prompt Strategy | Chain-of-thought (0.89) > Zero-shot (0.71) > One-shot (0.63) |
+| Latency | Simple Q: 0.5s — Complex Q: 6-32s |
+| Retrieval | Precision@2: 0.875, Recall@2: 0.875, MRR: 1.0 |
 
 ---
 
