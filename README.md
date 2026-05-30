@@ -36,10 +36,13 @@ llm-evaluation-playground/
 │   ├── 01_hallucination_eval.ipynb
 │   ├── 02_prompt_sensitivity.ipynb
 │   ├── 03_response_scoring.ipynb
-│   └── 04_model_comparison.ipynb
+│   ├── 04_model_comparison.ipynb
+│   ├── 05_latency_comparison.ipynb
+│   └── 06_retrieval_evaluation.ipynb
 ├── src/
 │   └── evaluator.py
 ├── results/
+│   └── README.md
 └── README.md
 ```
 
@@ -61,6 +64,21 @@ All experiments use local models via Ollama — no API key required.
 | Prompt Strategy | Chain-of-thought (0.89) > Zero-shot (0.71) > One-shot (0.63) |
 | Latency | Simple Q: 0.5s — Complex Q: 6-32s |
 | Retrieval | Precision@2: 0.875, Recall@2: 0.875, MRR: 1.0 |
+
+---
+
+## Getting Started
+
+```bash
+pip install sentence-transformers faiss-cpu pandas matplotlib requests
+```
+
+Start Ollama:
+```bash
+ollama serve
+```
+
+Then open any notebook in `notebooks/`.
 
 ---
 
