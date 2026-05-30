@@ -51,9 +51,31 @@ All experiments use local models via Ollama — no API key required.
 
 ---
 
+## Results
+
+| Experiment | Key Finding |
+|------------|-------------|
+| Hallucination | 0% hallucination with clear context instructions |
+| Prompt Sensitivity | 90% consistency across 4 question variants |
+| Response Scoring | Average score 0.60 — short answers penalized |
+| Prompt Strategy | Chain-of-thought (0.89) > Zero-shot (0.71) > One-shot (0.63) |
+
+---
+
 ## What I Learned
 
-TBD — will be updated after all experiments are complete.
+Evaluating LLMs is not about running one test — it is about systematic measurement.
+
+Hallucination depends heavily on prompt design.
+With a clear "answer only from context" instruction, gemma3:12b refused to hallucinate.
+
+Chain-of-thought prompting consistently outperforms other strategies.
+When the model reasons step by step, it produces more complete and accurate answers.
+
+Semantic similarity scoring is useful but imperfect.
+Short correct answers score lower than verbose ones — the metric needs calibration.
+
+One-shot prompting can hurt if the example is not carefully chosen.
 
 ---
 
